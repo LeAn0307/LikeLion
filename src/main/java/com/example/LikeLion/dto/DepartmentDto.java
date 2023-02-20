@@ -2,6 +2,7 @@ package com.example.LikeLion.dto;
 
 import lombok.*;
 
+import javax.validation.Valid;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
 import java.util.Date;
@@ -20,6 +21,7 @@ public class DepartmentDto {
     @NotEmpty(message = "Khong duoc rong description nha :>")
     private String description;
 
+    @Valid
     private List<EmployeeDto> employeeDtoList;
 
 }

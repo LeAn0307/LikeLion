@@ -1,6 +1,7 @@
 package com.example.LikeLion.dto;
 
 import lombok.*;
+import org.hibernate.validator.constraints.Length;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
@@ -16,6 +17,7 @@ public class EmployeeDto {
     private Long employeeId;
 
     @NotEmpty(message = "Khong duoc rong name nha :>")
+    @Length(min = 10, max=50)
     private String name;
     private Date birthDate;
     private String gender;
